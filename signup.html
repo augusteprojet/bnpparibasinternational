@@ -1,0 +1,1934 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+ 
+ <meta name="viewport" content="width=device-width,height=device-height initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title></title>
+  <style>
+
+  
+  
+  
+@media (min-width: 1331px) {
+    
+   body{
+  
+  background: whitesmoke;
+    }
+    .account{
+ padding: 0px 0px;
+    }
+    .account h1{
+      font-size: 25px;
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+   height: 500px;
+      margin: 10px auto;
+      width:500px;
+   display: flex;
+   flex-direction: column;
+ align-items: center;
+ background: white;
+  justify-content: center;
+padding: 8px;
+
+    border-radius: 8px;
+ box-shadow: 2px 2px 22px gray;
+  
+     
+   
+      overflow: hidden;
+    }
+.signup img{
+  margin: 10px;
+ border-radius: 50%; 
+height:90px;
+  width: 90px;
+}
+    input{
+
+  margin: 20px 0px;
+     height:30px;
+      width:400px;
+      margin:5px auto;
+      display: block;
+      border: 2px solid lightgrey;
+      border-radius: 5px;
+          font-size: 20px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+ text-shadow: 2px 2px 2px  lightgrey;
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   margin: 20px 0px;
+  
+    }
+    button{
+      display: block;
+      padding:5px 5px;
+    width: 400px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: seagreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+ text-align: center;
+      width: 500px;
+    font-size: 20px;
+   
+    }
+  
+ 
+ #isCompte{
+   display: none;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: fixed;
+   color: black;
+  padding: 0px 0px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 900;
+   top:0px;
+   left: 0px;
+   right: 0px;
+   background: whitesmoke;
+  height: 100%;
+ max-width: 100%;
+   transition :top 3s ease;
+ }
+ footer {
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px seagreen;
+ 
+
+  letter-spacing: 2px;
+ font-size: 25px;
+  text-align: center;
+  
+}
+nav{ 
+
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+   
+   }
+   #open i{
+ 
+   font-size: 15px;
+   }
+   #hover-list{
+     display: none
+   }
+  .list-drl{
+   
+    display:flex;
+     background:white;
+     justify-content: space-around;
+     align-items: center;
+     border-radius: 10px;
+ 
+  padding: 8px;
+     width: 800px;
+     opacity: 1;
+     transition: top opacity transform 5s ease;
+     box-shadow: 2px 2px 8px 1px lightgrey;
+     color: seagreen;;
+     
+   }
+.list-drl li{
+ list-style: none;
+margin: 0px 0px;
+
+}
+.list-drl li a{
+ 
+  font-size: 22px;
+text-decoration: none;
+list-style: none;
+display: block;
+
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+padding:4px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 4px 8px;
+
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+
+   .imgbank h1 {
+    color: seagreen;
+   
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+}
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      body{
+    position: relative;
+ 
+    top
+   margin :0px;
+   padding: 0px;
+  overflow-x: hidden;
+      color:white;
+  
+    }
+    .account{
+ padding: 10px 0px;
+    }
+    .account h1{
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+      overflow: hidden;
+      margin: 0 auto;
+width:100%px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  padding: 50px 0px;
+    border-radius: 5px;
+ box-shadow: 2px 2px 28px lightslategray;
+    opacity: 0.9;
+      
+   
+      overflow: hidden;
+    }
+.signup img{
+ border-radius: 50%; 
+height:80px;
+  width: 80px;
+}
+    input{
+  
+     height:30px;
+      width:280px;
+      margin:5px auto;
+      display: block;
+     border: 2px solid lightgrey;
+      border-radius: 2px;
+      font-size: 18px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+    text-shadow: 2px 2px 2px lightgrey;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   font-size: 18px;
+   width:100%;
+    }
+    button{
+      display: block;
+      padding:5px 0px;
+     width:300px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 3px;
+        font-size: 22px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: darkgreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+      text-align: center;
+      
+    
+      width: 100%;
+    }
+  
+ 
+ #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: absolute;
+   color: black;
+  padding: 20px 10px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 200;
+   top:-400px;
+   left: 0px;
+   background: whitesmoke;
+  
+ 
+   transition :top 3s ease;
+ }
+ footer {
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px ;
+ 
+margin: 20px;
+  letter-spacing: 2px;
+  -size: 20px;
+  text-align: center;
+  
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+  .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+margin: 80px 0px;
+   padding: 20px 0px;
+  width: 100%;
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+ display: block;
+ width: 300px;
+  list-style: none
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:300px;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:300px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ position: relative;
+ top: 20px;
+   width:50px;
+   padding: 5px 20px;
+     margin: 40px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+    #open {
+      display: none;
+    }
+  
+    .menu-hover {
+      display: none;
+    }
+}
+      @media (min-width: 320px) and (max-width: 480px) {
+    
+      body{
+    position: relative;
+ 
+    top
+   margin :0px;
+   padding: 0px;
+  overflow-x: hidden;
+      color:white;
+  
+    }
+    .account{
+ padding: 10px 0px;
+    }
+    .account h1{
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+      overflow: hidden;
+      margin: 0 auto;
+width:100%px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  padding: 50px 0px;
+    border-radius: 5px;
+ box-shadow: 2px 2px 28px lightslategray;
+    opacity: 0.9;
+      
+   
+      overflow: hidden;
+    }
+.signup img{
+ border-radius: 50%; 
+height:80px;
+  width: 80px;
+}
+    input{
+  
+     height:30px;
+      width:280px;
+      margin:5px auto;
+      display: block;
+     border: 2px solid lightgrey;
+      border-radius: 2px;
+      font-size: 18px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+    text-shadow: 2px 2px 2px lightgrey;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   font-size: 18px;
+   width:100%;
+    }
+    button{
+      display: block;
+      padding:5px 0px;
+     width:300px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 3px;
+        font-size: 22px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: darkgreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+      text-align: center;
+      
+    
+      width: 100%;
+    }
+  
+ 
+ #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: absolute;
+   color: black;
+  padding: 20px 10px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 200;
+   top:-400px;
+   left: 0px;
+   background: whitesmoke;
+  
+ 
+   transition :top 3s ease;
+ }
+ footer {
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px ;
+ 
+margin: 20px;
+  letter-spacing: 2px;
+  -size: 20px;
+  text-align: center;
+  
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+  .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+margin: 80px 0px;
+   padding: 20px 0px;
+  width: 100%;
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+ display: block;
+ width: 300px;
+  list-style: none
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:300px;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:300px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ position: relative;
+ top: 20px;
+   width:50px;
+   padding: 5px 20px;
+     margin: 40px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+  #open{
+ display: none;
+}
+.menu-hover{
+  display: none;
+}
+    
+      }
+
+      @media(min-width: 768px) and (max-width: 1249px) {
+         body{
+  
+  background: whitesmoke;
+    }
+    .account{
+ padding: 0px 0px;
+    }
+    .account h1{
+      font-size: 25px;
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+   height: 500px;
+      margin: 10px auto;
+      width:500px;
+   display: flex;
+   flex-direction: column;
+ align-items: center;
+ background: white;
+  justify-content: center;
+padding: 8px;
+
+    border-radius: 8px;
+ box-shadow: 2px 2px 22px gray;
+  
+     
+   
+      overflow: hidden;
+    }
+.signup img{
+  margin: 10px;
+ border-radius: 50%; 
+height:90px;
+  width: 90px;
+}
+    input{
+
+  margin: 20px 0px;
+     height:30px;
+      width:400px;
+      margin:5px auto;
+      display: block;
+      border: 2px solid lightgrey;
+      border-radius: 5px;
+          font-size: 20px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+ 
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   margin: 20px 0px;
+  
+    }
+    button{
+      display: block;
+      padding:5px 5px;
+    width: 400px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: seagreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+ text-align: center;
+      width: 500px;
+    font-size: 20px;
+   
+    }
+  
+ 
+ #isCompte{
+   display: none;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: fixed;
+   color: black;
+  padding: 0px 0px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 900;
+   top:0px;
+   left: 0px;
+   right: 0px;
+   background: whitesmoke;
+  height: 100%;
+ max-width: 100%;
+   transition :top 3s ease;
+ }
+ footer {
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px seagreen;
+ 
+
+  letter-spacing: 2px;
+ font-size: 25px;
+  text-align: center;
+  
+}
+nav{ 
+
+  display: flex;
+flex-direction: column;
+  justify-content: space-around;
+
+  margin: 0px 20px;
+    
+    width: 90%;
+   }
+   #open i{
+ 
+   font-size: 15px;
+   }
+   #hover-list{
+     display: none
+   }
+  .list-drl{
+   
+    display:flex;
+     background:white;
+     justify-content: space-around;
+     align-items: center;
+     align-items: center;
+     border-radius: 4px;
+
+  padding: 8px;
+     
+     opacity: 1;
+     transition: top opacity transform 5s ease;
+     box-shadow: 2px 2px 8px 1px lightgrey;
+     color: seagreen;;
+     
+   }
+.list-drl li{
+ list-style: none;
+margin: 0px 0px;
+
+}
+.list-drl li a{
+ 
+  font-size: 22px;
+text-decoration: none;
+list-style: none;
+display: block;
+
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+padding:4px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 4px 8px;
+
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+
+   .imgbank h1 {
+    color: seagreen;
+   
+    font-style: italic;
+   text-align: center;
+    text-shadow: 2px 2px 8px seagreen;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+}
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      body{
+    position: relative;
+ 
+    top
+   margin :0px;
+   padding: 0px;
+  overflow-x: hidden;
+      color:white;
+  
+    }
+    .account{
+ padding: 10px 0px;
+    }
+    .account h1{
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+      overflow: hidden;
+      margin: 0 auto;
+width:100%px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  padding: 50px 0px;
+    border-radius: 5px;
+ box-shadow: 2px 2px 28px lightslategray;
+    opacity: 0.9;
+      
+   
+      overflow: hidden;
+    }
+.signup img{
+ border-radius: 50%; 
+height:80px;
+  width: 80px;
+}
+    input{
+  
+     height:30px;
+      width:280px;
+      margin:5px auto;
+      display: block;
+     border: 2px solid lightgrey;
+      border-radius: 2px;
+      font-size: 18px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+    text-shadow: 2px 2px 2px lightgrey;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   font-size: 18px;
+   width:100%;
+    }
+    button{
+      display: block;
+      padding:5px 0px;
+     width:300px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 3px;
+        font-size: 22px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: darkgreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+      text-align: center;
+      
+    
+      width: 100%;
+    }
+  
+ 
+ #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: absolute;
+   color: black;
+  padding: 20px 10px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 200;
+   top:-400px;
+   left: 0px;
+   background: whitesmoke;
+  
+ 
+   transition :top 3s ease;
+ }
+ footer {
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px ;
+ 
+margin: 20px;
+  letter-spacing: 2px;
+  -size: 20px;
+  text-align: center;
+  
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+  .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+margin: 80px 0px;
+   padding: 20px 0px;
+  width: 100%;
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+ display: block;
+ width: 300px;
+  list-style: none
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:300px;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:300px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ position: relative;
+ top: 20px;
+   width:50px;
+   padding: 5px 20px;
+     margin: 40px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+    #open {
+      display: none;
+    }
+  
+    .menu-hover {
+      display: none
+    }
+      }
+@media(min-width: 1250px) and (max-width: 1330px){
+  body{
+  
+  background: whitesmoke;
+    }
+    .account{
+ padding: 0px 0px;
+    }
+    .account h1{
+      font-size: 25px;
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+   height: 500px;
+      margin: 10px auto;
+      width:500px;
+   display: flex;
+   flex-direction: column;
+ align-items: center;
+ background: white;
+  justify-content: center;
+padding: 8px;
+
+    border-radius: 8px;
+ box-shadow: 2px 2px 22px gray;
+  
+     
+   
+      overflow: hidden;
+    }
+.signup img{
+  margin: 10px;
+ border-radius: 50%; 
+height:90px;
+  width: 90px;
+}
+    input{
+
+  margin: 20px 0px;
+     height:30px;
+      width:400px;
+      margin:5px auto;
+      display: block;
+      border: 2px solid lightgrey;
+      border-radius: 5px;
+          font-size: 20px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+ 
+    font-size: 22px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   margin: 20px 0px;
+  
+    }
+    button{
+      display: block;
+      padding:5px 5px;
+    width: 400px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 5px;
+        font-size: 20px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: seagreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+ text-align: center;
+      width: 500px;
+    font-size: 20px;
+   
+    }
+  
+ 
+ #isCompte{
+   display: none;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: fixed;
+   color: black;
+  padding: 0px 0px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 900;
+   top:0px;
+   left: 0px;
+   right: 0px;
+   background: whitesmoke;
+  height: 100%;
+ max-width: 100%;
+   transition :top 3s ease;
+ }
+ footer {
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px seagreen;
+ 
+
+  letter-spacing: 2px;
+ font-size: 25px;
+  text-align: center;
+  
+}
+nav{ 
+
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+   margin: 0px 20px;
+   }
+   #open i{
+ 
+   font-size: 15px;
+   }
+   #hover-list{
+     display: none
+   }
+  .list-drl{
+   
+    display:flex;
+     background:white;
+     justify-content: space-around;
+     align-items: center;
+     border-radius: 10px;
+ 
+  padding: 4px;
+     width: 750px;
+     opacity: 1;
+     transition: top opacity transform 5s ease;
+     box-shadow: 2px 2px 8px 1px lightgrey;
+     color: seagreen;;
+     
+   }
+.list-drl li{
+ list-style: none;
+margin: 0px 0px;
+
+}
+.list-drl li a{
+ 
+  font-size: 22px;
+text-decoration: none;
+list-style: none;
+display: block;
+
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+padding:4px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 4px 8px;
+
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+
+   .imgbank h1 {
+    color: seagreen;
+   
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+}
+
+    @media (min-width: 481px) and (max-width: 767px) {
+      body{
+    position: relative;
+ 
+    top
+   margin :0px;
+   padding: 0px;
+  overflow-x: hidden;
+      color:white;
+  
+    }
+    .account{
+ padding: 10px 0px;
+    }
+    .account h1{
+     margin: 0px;
+      text-align: center;
+      color: seagreen;
+    }
+    .signup{
+      overflow: hidden;
+      margin: 0 auto;
+width:100%px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+  padding: 50px 0px;
+    border-radius: 5px;
+ box-shadow: 2px 2px 28px lightslategray;
+    opacity: 0.9;
+      
+   
+      overflow: hidden;
+    }
+.signup img{
+ border-radius: 50%; 
+height:80px;
+  width: 80px;
+}
+    input{
+  
+     height:30px;
+      width:280px;
+      margin:5px auto;
+      display: block;
+     border: 2px solid lightgrey;
+      border-radius: 2px;
+      font-size: 18px;
+    letter-spacing: 2px;
+      outline: none;
+     
+    }
+    
+  .password ,.email{
+    font-style: bold;
+    text-shadow: 2px 2px 2px lightgrey;
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin: 20px auto;
+    text-align: center;
+    width:100%;
+    color: seagreen;
+  }
+    .btn-sign{
+   display:flex;
+   justify-content: center;
+   font-size: 18px;
+   width:100%;
+    }
+    button{
+      display: block;
+      padding:5px 0px;
+     width:300px;
+        background:white;
+        color:seagreen ;
+        outline: none;
+        border:2px solid lightgrey;
+        border-radius: 3px;
+        font-size: 22px;
+    }
+    button:hover{
+      outline: none;
+      border: none;
+      background: darkgreen;
+      color: whitesmoke;
+    }
+    .info{
+      color: red;
+      text-align: center;
+      
+    
+      width: 100%;
+    }
+  
+ 
+ #isCompte{
+   display: flex;
+   flex-direction:column;
+justify-content: center;
+   align-items: center;
+   position: absolute;
+   color: black;
+  padding: 20px 10px;
+   letter-spacing: 3px;
+   font-size: 18px;
+   z-index: 200;
+   top:-400px;
+   left: 0px;
+   background: whitesmoke;
+  
+ 
+   transition :top 3s ease;
+ }
+ footer {
+ 
+ color: seagreen;
+text-shadow: 2px 2px 3px ;
+ 
+margin: 20px;
+  letter-spacing: 2px;
+  -size: 20px;
+  text-align: center;
+  
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+  .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+margin: 80px 0px;
+   padding: 20px 0px;
+  width: 100%;
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+ display: block;
+ width: 300px;
+  list-style: none
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:300px;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:300px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ position: relative;
+ top: 20px;
+   width:50px;
+   padding: 5px 20px;
+     margin: 40px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+    #open {
+      display: none;
+    }
+  
+    .menu-hover {
+      display: none;
+    }
+}
+  </style>
+</head>
+
+
+
+<body>
+  
+  
+  <div id="isCompte">
+    <div>
+      No tenías una cuenta en BNP Paribas Fortis.
+      <div style="margin: 10px 0px;">
+        
+    
+     Estás registrado? En caso afirmativo, espere unos minutos para validar el registro solicitado.
+     </div>
+     <div style="margin: 10px 0px;">
+       
+     
+     De lo contrario? regístrate ahora haciendo clic en el siguiente enlace
+     
+       
+     </div>
+     <a href="https://bnpparibas-gfrz.vercel.app/signin">S'inscrire</a>
+    </div>
+  </div>
+
+ 
+</div>
+       
+     </div>
+     
+       <div  id="google_translate_element">
+       </div>
+       
+     <nav>
+       
+    
+  <div class="imgbank">
+ 
+      
+    
+      <h1>BNP Paribas Fortis</h1>
+       
+        
+  </div>
+
+    <div class="menu">
+  <div class="list-drl">
+       <div class="list-item">
+         <li> <a href="https://bnpparibas-nine.vercel.app/  ">Bienvenida</a></li>
+    
+       </div>
+      
+  <div class="list-item">
+       <li><a href="https://bnpparibas-nine.vercel.app/signup ">Conectar</a></li>
+     </div>
+    <div class="list-item">
+         <li><a href="https://bnpparibas-nine.vercel.app/signin">Inscribirse</a></li>
+       </div>
+     
+       <div class="list-item">
+         <li><a href="https://bnpparibas-nine.vercel.app/account">Cuenta Bancaria</a></li>
+       </div>
+       <div class="list-item">
+         <li><a href="https://bnpparibas-nine.vercel.app/loan">Obtener crédito</a></li>
+     
+     
+     
+       </div>
+     
+   
+    
+     </div><div>
+   
+      <div class="menu-nav">
+     
+        
+              <div href id="hover-list"><i style="font-size:24px;text-align: center" class="fa">&#xf0c9;</i>
+              </div>
+      </div>
+
+    </nav>
+
+ 
+<div class="signup">
+  <img src="https://raw.githubusercontent.com/lisbonne456/gitau/master/bnp-paribas%20(1).jpg" alt="">
+  
+  <div class="account">
+ <h1>BNP Paribas Fortis</h1> 
+
+    <div class="email">
+      <div style="margin: 10px 0px;">
+        para conectarse a
+      </div>
+      Correo electronico (@) <i class="fa fa-envelope" style="font-size:24px"></i></div>
+      <div>
+           <input id="mail" type="text"placeholder="r@gmail.com" value="" />
+      </div>
+   
+       <div class="info">
+    
+       </div>
+     <div class="password">
+     Contraseña
+ <i style="font-size:24px" class="fa">&#xf084;</i>
+       
+     </div>
+     <div>
+           <input id="passw" type="password" placeholder="Contraseña" value=""/>
+     </div>
+
+   <div class="info">
+     
+   </div>
+ 
+</div>
+ <div class="btn-sign">
+         <button id=" btn"type="button" onclick="add()"  >
+         Iniciar sesión en su cuenta<i style="font-size:24px" class="fa">&#xf090;</i>
+         </button>
+     </div>
+       
+       </div> 
+      
+      </div>
+        <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+          <script type="text/javascript">
+            function googleTranslateElementInit() {
+              new google.translate.TranslateElement({ pageLanguage: 'en-US' }, 'google_translate_element');
+            }
+            console.log(navigator.language)
+          </script>
+     <script type="text/javascript" charset="utf-8">
+   const menuHover = document.getElementById('open')
+   const menuhover = document.getElementsByClassName('menu-hover')
+     var userConnectMail='',userConnectPassword=""
+     const isCompte=document.getElementById("isCompte")
+     
+     const btn=document.getElementById('btn')
+     const password = document.getElementById('passw')
+     const mail = document.getElementById("mail")
+     const info=document.getElementsByClassName('info')
+     
+     mail.addEventListener("focus",function(){
+       isCompte.style.top='-400px'
+     })
+     password.addEventListener("focus", function() {
+       isCompte.style.top = '-400px'
+     })
+   function add(){
+    
+     if(password.value!=''&& mail.value!=''){
+       userConnectMail=userFindEmail(mail.value,contenu)
+       userConnectPassword=userFindPassword(password.value,contenu)
+       if(password.value.length>=8){
+         
+         info[1].innerHTML=""
+       }
+       else{
+         info[1].innerHTML='La contraseña debe tener al menos 8 caracteres '
+       }
+     if(mail.value!=''){
+    
+       const index = mail.value.indexOf('@')
+       if (index > -1) {
+         info[0].innerHTML = ''
+       }
+       else {
+         info[0].innerHTML = 'El correo electrónico debe contener un símbolo @'
+       }
+     }
+     
+     
+     if(mail.value==userConnectMail.email& password.value==userConnectMail.password){
+   
+     const link=document.getElementById("link")
+       
+window.location.href=`https://bnpparibas-nine.vercel.app/account?authuser=${mail.value}`
+createCookie('email',mail.value,1)
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+       
+       
+     }
+     else{
+       const index = mail.value.indexOf('@')
+      if (password.value.length >= 8 && index > -1) {
+      
+      isCompte.style.top='80px'
+      }
+  
+     }
+     }
+     else{
+       if(mail.value==''){
+     
+         info[0].innerHTML=' El correo electrónico no se puede vaciare'
+       }
+       if(password.value==''){
+       
+         info[1].textContent="La contraseña no puede estar vacía"
+       }
+       if(mail.value!=''){
+       
+          userConnectMail=userFindEmail(mail.value,contenu)
+         const index=mail.value.indexOf('@')
+         if(index>-1){
+           info[0].innerHTML=''
+         }
+         else{
+           info[0].innerHTML='El correo electrónico debe tener una arroba @'
+         }
+        
+       }
+       if(password.value!=''){
+       userConnectPassword  =userFindPassword(password.value,contenu)
+     if (password.value.length >= 8) {
+     
+       info[1].innerHTML = ""
+     }
+     else{
+       info[1].textContent='La contraseña debe tener al menos 8 caracteres.'
+     }
+         
+       
+         
+       }
+     }
+   }
+   
+   
+   function createCookie(name, value, days) {
+     if (days) {
+       var date = new Date();
+       date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+       var expires = "; expires=" + date.toGMTString();
+     }
+     else var expires = "";
+     document.cookie = name + "=" + value + expires + "; path=/";
+   }
+   var contenu=[]
+   
+  
+  function userFetchInfo(user){
+ return user
+  }
+  
+function userFindEmail(mail,content){
+ 
+ 
+ let index=content.findIndex((index)=>index.email==mail )
+ if(index>-1){
+   return content[index]
+   
+ }
+ else{
+   return {email:''
+ }
+  
+ }
+}
+function userFindPassword(password,content){
+  
+  let index= content.findIndex((pass)=>pass.password==password)
+  if(index>-1){
+   return content[index]}
+ else{
+   return {password:''
+ }
+  
+ }
+ 
+}
+
+
+
+
+
+
+function getCookie(name) {
+  const cookies = document.cookie.split('; ')
+  const value = cookies
+    .find(c => c.startsWith(name + "="))
+    ?.split('=')[1]
+  if (value === undefined) {
+    return null
+  }
+  return decodeURIComponent(value)
+}
+
+let sessionEmail=""
+let bnpparislisbonne=""
+window.onload=function(){
+  fetch("https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json").then(function(resp) {
+    return resp.json()
+  }).then(function(data) {
+  
+  
+   contenu=(userFetchInfo(data))
+  
+  })
+  
+  if(sessionEmail!=null|| sessionEmail!=undefined && bnpparislisbonne!=null||bnpparislisbonne!=undefined){
+   
+  }
+  
+}
+
+let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""}
+    const list= document.getElementById('hover-list')
+    const app=document.getElementById('app')
+    const listItem=document.getElementsByTagName('li')
+    const listDeroulante=document.getElementsByClassName("list-drl")
+    
+    
+
+
+/*============Variables setting======*/
+
+
+
+
+
+  list.addEventListener('click',function() {
+      if(listOpe){
+        listDeroulante[0].style.top = '80px'
+        listDeroulante[0].style.opacity = 1
+        listDeroulante[0].style.display='flex'
+        listOpe=false
+      }
+      else{
+        listDeroulante[0].style.top = '65px'
+        listDeroulante[0].style.opacity = 0
+      listDeroulante[0].style.display='none'
+        listOpe=true
+      }
+    
+    })
+  /* menuHover.addEventListener('click', function() {
+       console.log('yearclick')
+       if (listOpe) {
+   
+         menuhover[0].style.display = 'block'
+         listOpe = false
+       }
+       else {
+   
+         menuhover[0].style.display = 'none'
+         listOpe = true
+       }
+   
+     }) */
+     </script>
+ 
+
+  
+    <footer>
+      All Right Reserved ©2024
+    </footer>
+</body>
+
+</html>

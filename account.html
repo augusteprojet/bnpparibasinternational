@@ -1,0 +1,3689 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BNP Paribas Fortis</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+</head>
+
+<style>
+
+@media (min-width: 1331px) {
+
+  
+
+
+  
+  title{
+  color: white;
+  background: white;
+}
+  body{
+ 
+  margin: 0px;
+    
+    padding: 0px;
+  
+  }
+
+ np-iban{
+  
+   
+  }
+  .transferto input{
+     margin-bottom: 20px;
+    height:30px;
+    margin: 10px auto;
+    color: black;
+    display: block;
+    font-size: 20px;
+    border: 2px solid whitesmoke;
+    outline: none;
+    width:95%;
+    background: white;
+    border-radius: 4px;
+  }
+  .transferto .iban input{
+     color: black;
+  }
+.transfert h2{
+ 
+  
+ 
+}
+
+.transferto h2,.transferto h4{
+  color: white;
+  margin: 0px;
+font-size: 22px;
+}
+.transferto{
+ display: flex;
+ align-content: center;
+ flex-direction: column;
+margin: 20px;
+}
+
+  .account{
+   
+  
+ width: 100%;
+    background: whitesmoke;
+  
+   
+  }
+  #trans{
+    
+  }
+  
+  
+  .account-typ h3,.account-typ h2,.account-typ h4{
+   color: seagreen;
+  
+
+  }
+  .account-typ h2{
+   
+  }
+  .account-dash{
+     font-size:22px;
+    display: flex;
+    padding: 20px 0px;
+  justify-content: center;
+  }
+  .account span{
+   display: inline-flex;
+ 
+   width: 550px;
+    border: 0.5px solid seagreen;
+    background:seagreen;
+    margin: 10px;
+  
+  }
+  .account-typ div{
+     font-size:20px;
+   
+ 
+  }
+  .bnp{
+
+    width: 100%;
+    
+  }
+  .bnp h2{
+   
+    margin: 0px 0px 0px 0px;
+    padding: 15px 0px;
+    color: seagreen;
+   text-align: center;
+   font-size: 22px;
+    box-shadow: inset 0px 0px 150px 1px lightgrey;
+background: white;
+border: 2px solid whitesmoke;
+   border-radius: 8px;
+  
+  }
+  .tot-amount h3{
+    border-radius: 2px;
+    color: white;
+    background:seagreen;
+   margin:0px;
+   padding:4px;
+   font-size:20px;
+    border-bottom:0.5px solid seashell;
+    text-align:center;
+  }
+  .tot-amount{
+   height: 150px;
+ width: 400px;
+
+   margin: 20px  10px;
+    box-shadow: 4px 4px 9px grey;
+   border-radius: 8px;
+    background: white;
+  }
+  .money{
+    border-radius: 2px;
+   
+    display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-content: center;
+   padding: 8px 0px;
+
+  text-align: center;
+   font-size: 25px;
+   
+    }
+ .btn-send{
+border: 2px solid white; 
+  padding:80px 5px;text-align: center;box-shadow: 2px 2px 28px white;border-radius: 8px;background: seagreen;color: white;width: 450px;
+  color: white;
+ 
+ } 
+.btn-send button{
+   position: relative;
+   text-align: center;
+   outline: none:
+   font-size:20px;
+   display:block;
+   margin: 0px auto;
+   border: 0.5px solid white;
+   border-radius: 4px;
+   width:50%;
+   padding:4px;
+   background:white;
+   color:black;
+   font-size:18px;
+}
+.hist{
+  
+  background: whitesmoke;
+  text-align: center;
+  
+} 
+.hist h2{
+  background: seagreen;
+  
+
+}
+.svg img{
+  height: 100px;
+  width: 100px;
+ margin:20px auto;
+  border:none;
+border-radius: 50%;
+}
+
+footer {
+
+ padding: 40px 0px;
+font-size: 22px;
+ background: seagreen;
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+.overlay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background: whitesmoke;
+  display:none;
+ opacity: 0.5;
+ z-index: 1000;
+ transition:1s opacity;
+ overflow:hidden;
+}
+.overlay-delay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background:black;
+  display:block;
+ opacity: 0.98;
+ z-index: 1000;
+ overflow:hidden;
+ transition-property: opacity,position,background;
+ transition-duration: 1s, 500ms;
+ transition-timing-function:ease-out;
+ transition-delay: 0s, 2s;
+}
+
+.message{
+ position: absolute;
+ top: 20%;
+ width:100%;
+ z-index:100;
+ opacity: 1;
+ color: green;
+font-size: 20px;
+ overflow: hidden;
+  background: white;
+}
+.message h2,.message h3{
+  color: seagreen;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.actived{
+  margin: 20px auto;
+  text-align: center;
+  color:seagreen;
+}
+.not-actived {
+ margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+.actif{
+  color: seagreen;
+  background: white;
+  padding: 10px 0px;
+  text-align: center;
+}
+.text-rond{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+ font-size: 28px;
+  height: 80px;
+  width:0px;
+  border: 1px solid seagreen;
+  border-radius:50%;
+  transform: scale(0.5);
+  
+}
+.text-status{
+  opacity: 1;
+ position: relative;
+ transform: translateX(0px);
+ text-align: center;
+ transition: opacity 5s ease;
+}
+.curr{
+  
+  font-size: 30px;
+  color: seagreen;
+}
+ 
+
+.info{
+  color: black;
+  font-size: 20px;
+}
+progress{
+   position: absolute;
+    top: 100%;
+   
+   background :whitesmoke;
+    height:30px;
+    width:400px;
+    text-align: center;
+    
+    box-sizing:border-box;
+    border-radius:20px;
+  }
+  .progress-done{
+    font-family: sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
+    border-radius:20px;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
+    width: 0;
+    transition: width,5s ease; 
+    transition-timing-function: 4s;
+  }
+.processing{
+  
+  
+}
+.icon{
+  margin: 30px 0px;
+  display: none;
+  
+  justify-content: center;
+  align-content: center;
+}
+.icon div{
+  margin-right: 10px;
+}
+.circle{
+  margin:20px auto;
+  width: 30px;
+}
+.notconnect{
+ 
+  color: black;
+}
+.access{
+ 
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+}
+.iconimg img{
+ margin: 50% 0px;
+  height: 200px;
+  width: 200px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
+#faremove{
+  position: fixed;
+  text-align: center;
+  display: none;
+  padding: 3px;
+  height: 25px;
+  width: 25px;
+  z-index: 999;
+  top: 150px;
+  background: red;
+  border-radius: 50%;
+  left: 1000px;
+}
+nav{ 
+
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+   width: 100%;
+   }
+   .list-drl{
+    
+  width:100%;
+     display:flex;
+    justify-items: center;
+    
+     border-radius: 10px;
+     background:white;
+  padding:  3px;
+     opacity: 1;
+     transition: top opacity transform 5s ease;
+     box-shadow: 2px 2px 28px lightgrey;
+     color: seagreen;
+     
+   }
+  
+   .mont-flex{
+     display: flex;
+ 
+  justify-content:center ;
+align-items: center;
+
+
+
+   border-radius: 4px;
+     align-items: center;
+   padding: 18px;
+   }
+   .flex-2{
+    display: flex;justify-content: space-evenly;align-items: center;margin-top: 25px;
+  padding-left:10px;text-align: center;
+   }
+.list-drl li{
+  list-style: none;
+margin: 0px 20px;
+padding: 10px 5px;
+
+}
+.menu-hover li{
+  list-style: none;
+}
+.menu-hover li a{
+  text-decoration:  none;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  color :white;
+
+}
+.menu-hover  a:hover{
+ 
+ 
+  border-radius: 4px;
+  background: white;
+  color:seagreen ;
+}
+.menu-hover{
+  display: none;
+  position: relative;
+  padding: 40px 0px;
+ bottom: 20px;
+  width: 1010px;
+  background-color: seagreen;
+}
+.list-drl li a{
+ font-size: 22px;
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+border-radius: 4px;
+color: seagreen;
+padding: 0px 8px;
+text-align: center;
+
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  
+  width:100%;
+ 
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+   color: seagreen;
+   font-size: 25px;
+   font-style: italic;
+   text-shadow: 2px 2px 4px seashell;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:150px;
+
+    
+   
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: none;
+}
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+position: fixed;
+  color: black;
+  width: 100%;
+height: 100%;
+  padding: 40px 20px;letter-spacing: 3px;
+  font-size: 18px;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+opacity: 1;
+
+  background: whitesmoke;
+overflow: hidden;
+
+  transition: top 3s ease;
+}
+.info-pero .n-bank{
+ background-color: red;
+}
+.info-pero{
+  height: 680px;
+  border: 2px solid white;
+  padding:10px;text-align: center;box-shadow: 2px 2px 8px gray;border-radius: 8px;background: white;
+}
+.info-per{
+  height: 680px;
+  margin: 80px 0px;
+border: 2px solid white;
+  padding:10px;text-align: center;box-shadow: 2px 2px 18px gray;border-radius: 8px;background: white;width: 350px;
+}
+}
+
+@media(min-width: 1250px) and (max-width: 1330px){
+   title{
+  color: white;
+  background: white;
+}
+  body{
+ 
+  margin: 0px;
+    
+    padding: 0px;
+  
+  }
+
+ np-iban{
+  
+   
+  }
+  .transferto input{
+     margin-bottom: 20px;
+    height:30px;
+    margin: 10px auto;
+    color: black;
+    display: block;
+    font-size: 20px;
+    border: 2px solid whitesmoke;
+    outline: none;
+    width:95%;
+    background: white;
+    border-radius: 4px;
+  }
+  .transferto .iban input{
+     color: black;
+  }
+.transfert h2{
+ 
+  
+ 
+}
+
+.transferto h2,.transferto h4{
+  color: white;
+  margin: 0px;
+font-size: 22px;
+}
+.transferto{
+ display: flex;
+ align-content: center;
+ flex-direction: column;
+
+}
+
+  .account{
+   
+  
+ width: 100%;
+    background: whitesmoke;
+  
+   
+  }
+  #trans{
+    
+  }
+  
+  
+  .account-typ h3,.account-typ h2,.account-typ h4{
+   color: seagreen;
+  
+
+  }
+  .account-typ h2{
+   
+  }
+  .account-dash{
+     font-size:22px;
+    display: flex;
+    padding: 20px 0px;
+  justify-content: center;
+  }
+  .account span{
+   display: inline-flex;
+
+  width: 500px;
+    height: 3px;
+   margin:0px 10px;
+    border: 0.5px solid seagreen;
+    background:seagreen;
+   
+   text-shadow: 12px 2px grey
+  
+  }
+  .account-typ div{
+     font-size:20px;
+   
+ 
+  }
+  .bnp{
+   
+    
+  }
+  .bnp h2{
+   
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px;
+    color: seagreen;
+   text-align: center;
+   font-size: 22px;
+   border-radius: 10px;
+border: 2px solid whitesmoke;
+    background: white;
+  
+  }
+  .tot-amount h3{
+    border-radius: 2px;
+    color: white;
+    background:seagreen;
+   margin:0px;
+   padding:4px;
+   font-size:18px;
+    border-bottom:0.5px solid seashell;
+    text-align:center;
+  }
+  .tot-amount{
+   
+ width: 400px;
+   
+   margin: 20px  10px;
+    box-shadow: 4px 4px 9px grey;
+   border-radius: 8px;
+  }
+  .money{
+    border-radius: 2px;
+   
+ 
+   padding: 8px 0px;
+  background:white;
+  text-align: center;
+   font-size: 25px;
+   
+    }
+ .btn-send{
+border: 2px solid white; 
+margin: 20px 0px;
+  padding:80px 5px;text-align: center;box-shadow: 2px 2px 28px white;border-radius: 8px;background: seagreen;color: white;width: 450px;
+  color: white;
+ 
+ } 
+.btn-send button{
+   position: relative;
+   text-align: center;
+   outline: none:
+   font-size:20px;
+   display:block;
+   margin: 0px auto;
+   border: 0.5px solid white;
+   border-radius: 4px;
+   width:50%;
+   padding:4px;
+   background:white;
+   color:black;
+   font-size:18px;
+}
+.hist{
+  
+  background: whitesmoke;
+  text-align: center;
+  
+} 
+.hist h2{
+  background: seagreen;
+  
+
+}
+.svg img{
+  height: 280px;.
+  width: 280px;
+ margin:20px auto;
+  border:none;
+border-radius: 50%;
+}
+
+footer {
+ position: absolute;
+display: flex;
+flex-direction: column;
+left: 25%;
+right: 25%;
+
+align-items: center;
+font-size: 22px;
+ z-index: 440;
+text-align: center;
+
+
+
+}
+.overlay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background: whitesmoke;
+  display:none;
+ opacity: 0.5;
+ z-index: 1000;
+ transition:1s opacity;
+ overflow:hidden;
+}
+.overlay-delay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background:black;
+  display:block;
+ opacity: 0.98;
+ z-index: 1000;
+ overflow:hidden;
+ transition-property: opacity,position,background;
+ transition-duration: 1s, 500ms;
+ transition-timing-function:ease-out;
+ transition-delay: 0s, 2s;
+}
+
+.message{
+ position: absolute;
+ top: 20%;
+ width:100%;
+ z-index:100;
+ opacity: 1;
+ color: green;
+font-size: 20px;
+ overflow: hidden;
+  background: white;
+}
+.message h2,.message h3{
+  color: seagreen;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.actived{
+  margin: 20px auto;
+  text-align: center;
+  color:seagreen;
+}
+.not-actived {
+ margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+.actif{
+  color: seagreen;
+  background: white;
+  padding: 10px 0px;
+  text-align: center;
+}
+.text-rond{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+ font-size: 28px;
+  height: 80px;
+  width:0px;
+  border: 1px solid seagreen;
+  border-radius:50%;
+  transform: scale(0.5);
+  
+}
+.text-status{
+  opacity: 1;
+ position: relative;
+ transform: translateX(0px);
+ text-align: center;
+ transition: opacity 5s ease;
+}
+.curr{
+  
+  font-size: 20px;
+  color: seagreen;
+}
+ 
+
+.info{
+  color: black;
+  font-size: 20px;
+}
+progress{
+   position: absolute;
+    top: 100%;
+   
+   background :whitesmoke;
+    height:30px;
+    width:400px;
+    text-align: center;
+    
+    box-sizing:border-box;
+    border-radius:20px;
+  }
+  .progress-done{
+    font-family: sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
+    border-radius:20px;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
+    width: 0;
+    transition: width,5s ease; 
+    transition-timing-function: 4s;
+  }
+.processing{
+  
+  
+}
+.icon{
+  margin: 30px 0px;
+  display: none;
+  
+  justify-content: center;
+  align-content: center;
+}
+.icon div{
+  margin-right: 10px;
+}
+.circle{
+  margin:20px auto;
+  width: 30px;
+}
+.notconnect{
+ 
+  color: black;
+}
+.access{
+ 
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+}
+.iconimg img{
+ margin: 50% 0px;
+  height: 200px;
+  width: 200px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
+#faremove{
+  position: fixed;
+  text-align: center;
+  display: none;
+  padding: 3px;
+  height: 25px;
+  width: 25px;
+  z-index: 999;
+  top: 150px;
+  background: red;
+  border-radius: 50%;
+  left: 1000px;
+}
+nav{ 
+
+  display: flex;
+  justify-content: space-around;
+align-items: center;
+   width: 100%;
+   }
+   .list-drl{
+    
+  width:100%;
+     display:flex;
+    justify-items: center;
+    
+     border-radius: 10px;
+     background:white;
+  padding:  3px;
+     opacity: 1;
+     transition: top opacity transform 5s ease;
+     box-shadow: 2px 2px 28px lightgrey;
+     color: seagreen;
+     
+   }
+  
+   .mont-flex{
+     display: flex;
+ 
+  justify-content:center ;
+align-items: center;
+
+
+
+   border-radius: 4px;
+     align-items: center;
+   padding: 18px;
+   }
+   .flex-2{
+    display: flex;
+  width: 100%;
+  justify-content: space-around;
+   
+  padding-left:10px;text-align: center;
+  flex-wrap: wrap;
+   }
+.list-drl li{
+  list-style: none;
+margin: 0px 20px;
+padding: 10px 5px;
+
+}
+.menu-hover li{
+  list-style: none;
+}
+.menu-hover li a{
+  text-decoration:  none;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  color :white;
+
+}
+.menu-hover  a:hover{
+ 
+ 
+  border-radius: 4px;
+  background: white;
+  color:seagreen ;
+}
+.menu-hover{
+  display: none;
+  position: relative;
+  padding: 40px 0px;
+ bottom: 20px;
+  width: 1010px;
+  background-color: seagreen;
+}
+.list-drl li a{
+ font-size: 22px;
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+border-radius: 4px;
+color: seagreen;
+padding: 0px 8px;
+text-align: center;
+
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  
+  width:100%;
+ 
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+   color: seagreen;
+   font-size: 25px;
+   font-style: italic;
+   text-shadow: 2px 2px 4px seashell;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:150px;
+
+    
+   
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: none;
+}
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+position: fixed;
+  color: black;
+  width: 100%;
+ height:100%;
+
+ letter-spacing: 3px;
+  font-size: 18px;
+ left: 0px;
+ right: 0px;
+  top:0px;
+opacity: 1;
+z-index: 1000;
+  background: whitesmoke;
+overflow: hidden;
+
+  transition: top 3s ease;
+}
+.info-pero .n-bank{
+ background-color: red;
+}
+.info-pero{
+  padding: 2px;
+  height: 680px;
+  border: 2px solid white;
+  text-align: center;box-shadow: 2px 2px 8px gray;border-radius: 8px;background: white;
+  width: 45%;
+}
+.info-per{
+    height: 680px;
+border: 2px solid white;
+  text-align: center;box-shadow: 2px 2px 18px gray;border-radius: 8px;background: white;
+width: 45%;
+
+}
+}
+@media (min-width: 481px) and (max-width: 767px) {
+
+  title{
+  color: white;
+  background: white;
+}
+  body{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+   margin: 0px;
+    
+    background-size: 100%;
+  }
+  .transferto .bic input{
+    margin-bottom: 20px;
+    height:50px;
+    border: 2px solid seagreen;
+    outline: none;
+    width:100%;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 4px;
+  }
+  .inp-iban{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .transferto .iban input{
+    margin-bottom: 20px;
+    height:50px;
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 25px;
+    border: 2px solid whitesmoke;
+    outline: none;
+    width:400px;
+    background: seagreen;
+    border-radius: 4px;
+  }
+.transfert h2{
+  margin: 20px 0px;
+  padding: 8px 0px;
+ border-radius: 2px;
+ 
+  width:300px;
+  color:seagreen;
+  background: white;
+  
+ 
+}
+.cuenta h2{
+  text-align: center;
+}
+.transferto h2,.transferto h4{
+  color: seagreen;
+  margin: 0px;
+
+}
+.transferto{
+  margin: 20px 0px;
+  padding:20px 0px;
+
+ 
+  background: whitesmoke;
+}
+.mont-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.flex-2{
+  display: flex;
+  flex-direction: column;
+
+
+}
+  .account{
+   
+  
+ padding-left: 50px;
+    
+  background: whitesmoke;
+   
+  }
+  .account-typ h3,.account-typ h2,.account-typ h4{
+    color: seagreen;
+    margin-left: 2px;
+  }
+  
+  
+ 
+  .account span{
+  display: inline-flex;
+
+  width: 200px;
+    height: 3px;
+   margin:0px 10px;
+    border: 0.5px solid seagreen;
+    background:seagreen;
+   
+   text-shadow: 12px 2px grey;
+  }
+  .account-dash div{
+    font-weight: bolder;
+    font-size: 22px;
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+  .bnp h2{
+   
+    margin: 0px 0px 0px 0px;
+    padding: 15px 0px;
+    color: seagreen;
+   text-align: center;
+   box-shadow: inset 0px 0px 22px 1px lightgrey;
+border: 2px solid whitesmoke;
+    background: white;
+    
+  }
+  .tot-amount h3{
+    border-radius: 2px;
+    color: white;
+    background:seagreen;
+   margin:0px;
+   padding:4px;
+    border-bottom:0.5px solid black;
+    text-align:center;
+  }
+  .tot-amount{
+    
+    height: 150px;
+    background: whitesmoke;
+   margin: 10px 0px;
+    width: 400px;
+   border-radius: 8px;
+  }
+  .money{
+    border-radius: 2px;
+   
+   
+   padding: 18px 0px;
+  background:white;
+   font-size: 20px;
+    text-align: center;
+    }
+
+ .btn-send button{
+  position: relative;
+margin: 0 auto;   text-align: center;
+   outline: none:
+   font-size:20px;
+   display:block;
+   border:0.5px solid seagreen;
+  width: 400px;
+   padding:8px;
+   background:seagreen;
+   color:white;
+   font-size:18px;
+ } 
+
+.hist{
+  
+  background: whitesmoke;
+  text-align: center;
+  
+} 
+.hist h2{
+  background: seagreen;
+  
+
+}
+.svg img{
+  height: 80px;
+  width: 80px;
+ margin:20px auto;
+  border:none;
+border-radius: 50%;
+}
+
+footer {
+ text-align: center;
+  background: whitesmoke;
+
+  letter-spacing: 3px;
+padding: 20px 0px;
+
+
+}
+.overlay{
+  position:fixed;
+  height: 800px;
+  top: -20%;
+  bottom: 0%;left: 0%;right: 0%;
+  background: whitesmoke;
+  display:none;
+ opacity: 0.5;
+ z-index: 1000;
+ transition:1s opacity;
+ 
+}
+.overlay-delay{
+  position:fixed;
+  top: 0%;
+  
+  bottom: 0%;left: 0%;right: 0%;
+  background:black;
+  display:block;
+ opacity: 0.98;
+ z-index: 1000;
+ overflow:hidden;
+ transition-property: opacity,position,background;
+ transition-duration: 1s, 500ms;
+ transition-timing-function:ease-out;
+ transition-delay: 0s, 2s;
+}
+
+.message{
+ position: absolute;
+ height: 1200px;
+ top: 20%;
+ width:100%;
+ z-index:100;
+ opacity: 1;
+ color: green;
+
+ 
+  background: white;
+}
+.message h2,.message h3{
+  color: seagreen;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.actived{
+  margin: 20px auto;
+  text-align: center;
+  color:seagreen;
+}
+.not-actived {
+ margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+.actif{
+  color: seagreen;
+  background: white;
+  padding: 10px 0px;
+  text-align: center;
+}
+.text-rond{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+ font-size: 28px;
+  height: 80px;
+  width:0px;
+  border: 1px solid seagreen;
+  border-radius:50%;
+  transform: scale(0.5);
+  
+}
+.text-status{
+  opacity: 1;
+ position: relative;
+ transform: translateX(0px);
+ text-align: center;
+ transition: opacity 5s ease;
+}
+.curr{
+  
+  font-size: 40px;
+  color: seagreen;
+}
+ 
+
+.info{
+  color: red;
+}
+progress{
+   position: absolute;
+    top: 100%;
+   
+   background :whitesmoke;
+    height:30px;
+    width:400px;
+    text-align: center;
+    
+    box-sizing:border-box;
+    border-radius:20px;
+  }
+  .progress-done{
+    font-family: sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
+    border-radius:20px;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
+    width: 0;
+    transition: width,5s ease; 
+    transition-timing-function: 4s;
+  }
+.processing{
+  
+  
+}
+.icon{
+  margin: 30px 0px;
+  display: flex;
+  
+  justify-content: center;
+  align-content: center;
+}
+.icon div{
+  margin-right: 10px;
+}
+.circle{
+  margin:20px auto;
+  width: 30px;
+}
+.access{
+ height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.iconimg img{
+ margin: 50% 0px;
+  
+  height: 200px;
+  width:200px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
+#faremove{
+  position: fixed;
+  display: none;
+  z-index: 999;
+  top: 150px;
+  left: 320px;
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+   .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+margin: 80px 0px;
+   padding: 20px 0px;
+  
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+  
+  list-style: none;
+ width: 363px;
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:50px;
+   padding: 5px 20px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+position: fixed;
+  color: black;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 3px;
+  font-size: 18px;
+  text-align: center;
+  top: 0px;
+opacity: 1;
+bottom: 0px;
+right: 0px;
+  left: 0px;
+  background: whitesmoke;
+overflow: hidden;
+
+  transition: top 3s ease
+}
+#open{
+ display: none;
+}
+.menu-hover{
+  display: none;
+}
+}
+
+@media (min-width: 300px) and (max-width: 480px) {
+
+
+  title{
+  color: white;
+  background: white;
+}
+.cuenta h2{
+  text-align: center;
+}
+  body{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    bottom: 0px;
+    right: 0px;
+    z-index: 1;
+   margin: 0px;
+    width: 100%;
+   
+  }
+  .transferto .bic{
+    text-align: center;
+  }
+  .transferto .bic input{
+    margin-bottom: 20px;
+    height:50px;
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 25px;
+ border-radius: 4px;
+    outline: none;
+ border: 2px solid seagreen;
+  color: black;
+  }
+  .inp-iban{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .transferto .iban input{
+    margin-bottom: 20px;
+    height:50px;
+    text-align: center;
+    color: white;
+    display: block;
+    font-size: 25px;
+ border-radius: 4px;
+    outline: none;
+ border: 2px solid seagreen;
+    background: seagreen;
+  
+  }
+.transfert h2{
+  margin: 20px 0px;
+  padding: 8px 0px;
+ border-radius: 2px;
+  text-align: center;
+  width:300px;
+  color:seagreen;
+  background: white;
+  
+ 
+}
+
+.transferto h2,.transferto h4{
+  color: seagreen;
+  margin: 0px;
+
+}
+.transferto{
+  margin: 20px 0px;
+  padding:20px 0px;
+  display: flex;
+   
+  flex-direction: column;
+  
+}
+
+  .account{
+   
+  
+  padding: 0px 0px 20px 0px;
+    
+  background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .account-typ h3,.account-typ h2,.account-typ h4{
+    color: seagreen;
+  
+  }
+  .account-typ h2{
+    
+  width:100%;
+  
+  }
+  .account-dash{
+     font-size:20px;
+    display: flex;
+    padding: 20px 0px;
+  
+  }
+  .account span{
+   display: inline-block;
+    height: 5px;
+    width:100px;
+    border: 0.5px solid seagreen;
+    background:seagreen;
+   
+   text-shadow: 12px 2px;
+  }
+  .account-typ div{
+    font-weight: bolder;
+    font-size: 18px;
+
+  }
+  .bnp h2{
+   
+    margin: 0px 0px 0px 0px;
+    padding: 15px 0px;
+    color: seagreen;
+   text-align: center;
+   box-shadow: inset 0px 0px 22px 1px lightgrey;
+border: 2px solid whitesmoke;
+    background: white;
+    
+  }
+  .tot-amount h3{
+    border-radius: 2px;
+    color: white;
+    background:seagreen;
+   margin:0px;
+   padding:4px;
+    border-bottom:0.5px solid black;
+    text-align:center;
+  }
+  .tot-amount{
+    
+    height: 150px;
+    background: whitesmoke;
+   margin: 10px 0px;
+    
+   border-radius: 8px;
+  }
+  .money{
+    border-radius: 2px;
+   
+    width:300px;
+   padding: 18px 0px;
+  background:white;
+   font-size: 20px;
+    text-align: center;
+    }
+    
+ .btn-send button{
+  position: relative;
+   text-align: center;
+   outline: none:
+   font-size:20px;
+   display:block;
+   border:0.5px solid seagreen;
+   width:100%;
+   padding:8px;
+   background:seagreen;
+   color:white;
+   font-size:18px;
+ } 
+
+.hist{
+  
+  background: whitesmoke;
+  text-align: center;
+  
+} 
+.hist h2{
+  background: seagreen;
+  
+
+}
+.svg img{
+  height: 80px;
+  width: 80px;
+ margin:20px auto;
+  border:none;
+border-radius: 50%;
+}
+
+footer {
+ text-align: center;
+  background: whitesmoke;
+
+  letter-spacing: 3px;
+padding: 20px 0px;
+
+
+}
+.overlay{
+  position:fixed;
+  top: -20%;
+  bottom: 0%;left: 0%;right: 0%;
+  background: whitesmoke;
+  display:none;
+ opacity: 0.5;
+ z-index: 1000;
+ transition:1s opacity;
+ overflow:hidden;
+}
+.overlay-delay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background:black;
+  display:block;
+ opacity: 0.98;
+ z-index: 1000;
+ overflow:hidden;
+ transition-property: opacity,position,background;
+ transition-duration: 1s, 500ms;
+ transition-timing-function:ease-out;
+ transition-delay: 0s, 2s;
+}
+
+.message{
+ position: absolute;
+ top: 20%;
+
+ width:100%;
+ z-index:100;
+ opacity: 1;
+ color: green;
+
+ overflow: hidden;
+  background: white;
+}
+.message h2,.message h3{
+  color: seagreen;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.actived{
+  margin: 20px auto;
+  text-align: center;
+  color:seagreen;
+}
+.not-actived {
+ margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+.actif{
+  color: seagreen;
+  background: white;
+  padding: 10px 0px;
+  text-align: center;
+}
+.text-rond{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+ font-size: 28px;
+  height: 80px;
+  width:0px;
+  border: 1px solid seagreen;
+  border-radius:50%;
+  transform: scale(0.5);
+  
+}
+.text-status{
+  opacity: 1;
+ position: relative;
+ transform: translateX(0px);
+ text-align: center;
+ transition: opacity 5s ease;
+}
+.curr{
+  
+  font-size: 40px;
+  color: seagreen;
+}
+ 
+
+.info{
+  color: red;
+}
+progress{
+   position: absolute;
+    top: 100%;
+   
+   background :whitesmoke;
+    height:30px;
+    width:400px;
+    text-align: center;
+    
+    box-sizing:border-box;
+    border-radius:20px;
+  }
+  .progress-done{
+    font-family: sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
+    border-radius:20px;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
+    width: 0;
+    transition: width,5s ease; 
+    transition-timing-function: 4s;
+  }
+.processing{
+  
+  
+}
+.icon{
+  margin: 30px 0px;
+  display: flex;
+  
+  justify-content: center;
+  align-content: center;
+}
+.icon div{
+  margin-right: 10px;
+}
+.circle{
+  margin:20px auto;
+  width: 30px;
+}
+.access{
+ height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.iconimg img{
+ margin: 50% 0px;
+  
+  height: 100px;
+  width:100px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
+#faremove{
+  position: fixed;
+  display: none;
+  z-index: 999;
+  top: 150px;
+  left: 320px;
+}
+nav{ 
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+   
+   }
+   .list-drl{
+     position: absolute;
+   left: 0px;
+   right: 0px;
+z-index: 999;
+top: 80px;
+margin: 80px 0px;
+   padding: 20px 0px;
+  
+     display:none;
+     background:whitesmoke;
+     flex-direction: column;
+   
+     align-items:center;
+     opacity: 0;
+    transition: top opacity transform 5s ease;
+  
+     color: seagreen;
+     
+   }
+.list-drl li{
+  
+  list-style: none;
+ width: 363px;
+ text-align: center;
+  margin: 20px 0px;
+  background: white;
+  background: white;
+
+}
+.list-drl li a{
+ 
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+color: seagreen;
+border-radius: 8px;
+text-align: center;
+font-size: 20px;
+padding: 8px 0px;
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  padding: 8px 0px;
+  width:363px;
+  border-radius: 4px;
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    color: seagreen;
+    font-size: 20px;
+    font-style: italic;
+   
+    text-shadow: 2px 2px 8px seashell;
+   text-transform: uppercase;
+   }
+   .menu .menu-logo{
+
+ 
+
+   
+   
+   }
+   .menu-nav div{
+   
+ 
+   width:50px;
+   padding: 5px 20px;
+     margin: 30px;
+     font-size: 20px;
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: block;
+}
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+position: fixed;
+  color: black;
+  height: 100%;
+  width: 100%;
+  letter-spacing: 3px;
+  font-size: 18px;
+  top: 0px;
+  bottom: 0px;
+  text-align: center;
+opacity: 1;
+right: 0px;
+  left: 0px;
+  background: whitesmoke;
+overflow: hidden;
+
+  transition: top 3s ease;
+}
+#open{
+ display: none;
+}
+.menu-hover{
+  display: none;
+}
+.mont-flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.flex-2{
+  display: flex;
+  flex-direction: column;
+align-items: center;
+text-align: center;
+overflow: hidden;
+flex-wrap: wrap;
+
+}
+.info-pero .account-typ{
+  display: flex;
+  flex-direction: column;
+align-items: center;
+text-align: center;
+flex-wrap: wrap 
+}
+}
+@media(min-width: 768px) and (max-width: 1249px) {
+  title{
+  color: white;
+  background: white;
+}
+  body{
+ 
+  margin: 0px;
+    width: 100%;
+    padding: 0px;
+  
+  }
+
+ np-iban{
+  
+   
+  }
+  .transferto input{
+     margin-bottom: 20px;
+    height:30px;
+    margin: 10px auto;
+    color: black;
+    display: block;
+    font-size: 20px;
+    border: 2px solid whitesmoke;
+    outline: none;
+    width:95%;
+    background: white;
+    border-radius: 4px;
+  }
+  .transferto .iban input{
+     color: black;
+  }
+.transfert h2{
+ 
+  
+ 
+}
+
+.transferto h2,.transferto h4{
+  color: white;
+  margin: 0px;
+font-size: 22px;
+}
+.transferto{
+ display: flex;
+ align-content: center;
+ flex-direction: column;
+width: 100%;
+}
+
+  .account{
+
+   display: block;
+width: 100%;
+
+  
+  padding: 0px;
+   overflow: hidden;
+  }
+  #trans{
+    
+  }
+  
+  
+  .account-typ h3,.account-typ h2,.account-typ h4{
+   color: seagreen;
+  
+
+  }
+  .account-typ h2{
+   
+  }
+  .account-dash{
+     font-size:22px;
+    display: flex;
+    padding: 20px 0px;
+  justify-content: center;
+  }
+  .account span{
+   display: inline-flex;
+
+  width: 300px;
+    height: 3px;
+   margin:0px 10px;
+    border: 0.5px solid seagreen;
+    background:seagreen;
+   
+   text-shadow: 12px 2px grey
+  
+  }
+  .account-typ div{
+     font-size:20px;
+   
+ 
+  }
+  .bnp{
+    display: block;
+background: red;
+    
+  }
+  .bnp h2{
+   
+    margin: 0px 0px 0px 0px;
+    padding: 5px 0px;
+    color: seagreen;
+   text-align: center;
+   font-size: 22px;
+
+border-top: 0.5px solid whitesmoke;
+    background: white;
+  
+  }
+  .tot-amount h3{
+    border-radius: 2px;
+    color: white;
+    background:seagreen;
+   margin:0px;
+   padding:4px;
+   font-size:18px;
+    border-bottom:0.5px solid seashell;
+    text-align:center;
+  }
+  .tot-amount{
+   
+ width: 400px;
+   
+   margin: 20px  10px;
+    box-shadow: 4px 4px 9px grey;
+   border-radius: 8px;
+  }
+  .money{
+    border-radius: 2px;
+   
+ 
+   padding: 8px 0px;
+  background:white;
+  text-align: center;
+   font-size: 25px;
+   
+    }
+ .btn-send{
+border: 2px solid white; 
+margin: 20px 0px;
+  padding:80px 5px;text-align: center;box-shadow: 2px 2px 28px white;border-radius: 8px;background: seagreen;color: white;width: 450px;
+  color: white;
+ 
+ } 
+.btn-send button{
+   position: relative;
+   text-align: center;
+   outline: none:
+   font-size:20px;
+   display:block;
+   margin: 0px auto;
+   border: 0.5px solid white;
+   border-radius: 4px;
+   width:50%;
+   padding:4px;
+   background:white;
+   color:black;
+   font-size:18px;
+}
+.hist{
+  
+  background: whitesmoke;
+  text-align: center;
+  
+} 
+.hist h2{
+  background: seagreen;
+  
+
+}
+.svg img{
+  height: 100px;
+  width: 100px;
+ margin:20px auto;
+  border:none;
+border-radius: 50%;
+}
+
+footer {
+ position: absolute;
+display: flex;
+flex-direction: column;
+left: 25%;
+right: 25%;
+
+align-items: center;
+font-size: 22px;
+ z-index: 440;
+text-align: center;
+
+
+
+}
+.overlay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background: whitesmoke;
+  display:none;
+ opacity: 0.5;
+ z-index: 1000;
+ transition:1s opacity;
+ overflow:hidden;
+}
+.overlay-delay{
+  position:fixed;
+  top: 0%;
+  bottom: 0%;left: 0%;right: 0%;
+  background:black;
+  display:block;
+ opacity: 0.98;
+ z-index: 1000;
+ overflow:hidden;
+ transition-property: opacity,position,background;
+ transition-duration: 1s, 500ms;
+ transition-timing-function:ease-out;
+ transition-delay: 0s, 2s;
+}
+
+.message{
+ position: absolute;
+ top: 20%;
+ width:100%;
+ z-index:100;
+ opacity: 1;
+ color: green;
+font-size: 20px;
+ overflow: hidden;
+  background: white;
+}
+.message h2,.message h3{
+  color: seagreen;
+  text-align:center;
+  letter-spacing: 2px;
+}
+.actived{
+  margin: 20px auto;
+  text-align: center;
+  color:seagreen;
+}
+.not-actived {
+ margin: 20px auto;
+  text-align: center;
+  color: red;
+}
+.actif{
+  color: seagreen;
+  background: white;
+  padding: 10px 0px;
+  text-align: center;
+}
+.text-rond{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+position: relative;
+ font-size: 28px;
+  height: 80px;
+  width:0px;
+  border: 1px solid seagreen;
+  border-radius:50%;
+  transform: scale(0.5);
+  
+}
+.text-status{
+  opacity: 1;
+ position: relative;
+ transform: translateX(0px);
+ text-align: center;
+ transition: opacity 5s ease;
+}
+.curr{
+  
+  font-size: 20px;
+  color: seagreen;
+}
+ 
+
+.info{
+  color: black;
+  font-size: 20px;
+}
+progress{
+   position: absolute;
+    top: 100%;
+   
+   background :whitesmoke;
+    height:30px;
+    width:400px;
+    text-align: center;
+    
+    box-sizing:border-box;
+    border-radius:20px;
+  }
+  .progress-done{
+    font-family: sans-serif;
+    font-weight: bolder;
+    height: 100%;
+    background: linear-gradient(to left,rgba(8, 239, 136, 1),rgba(211, 211, 211, 1));
+    border-radius:20px;
+  display: grid;
+  place-items: center;
+  margin: 20px auto;
+    width: 400px;
+    box-shadow: 0 0 3px -5px rgba(0, 167, 89, 1) ,0 3px whitesmoke#A9A9A9;
+    width: 0;
+    transition: width,5s ease; 
+    transition-timing-function: 4s;
+  }
+.processing{
+  
+  
+}
+.icon{
+  margin: 30px 0px;
+  display: none;
+  
+  justify-content: center;
+  align-content: center;
+}
+.icon div{
+  margin-right: 10px;
+}
+.circle{
+  margin:20px auto;
+  width: 30px;
+}
+.notconnect{
+ 
+  color: black;
+}
+.access{
+ 
+  display: block;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 40px;
+}
+.iconimg img{
+ margin: 50% 0px;
+  height: 200px;
+  width: 200px;
+  color: seagreen;
+}
+.access a{
+  text-decoration: none;
+  padding: 10px;
+  color:white;
+  background: seagreen;
+}
+#faremove{
+  position: fixed;
+  text-align: center;
+  display: none;
+  padding: 3px;
+  height: 25px;
+  width: 25px;
+  z-index: 999;
+  top: 150px;
+  background: red;
+  border-radius: 50%;
+  left: 1000px;
+}
+nav{ 
+
+  display:flex;
+  flex-direction: column;
+  justify-items: center;
+ align-items: center;
+   
+   }
+   .list-drl{
+    
+  width:100%;
+     display:flex;
+    justify-content: center;
+    
+    align-items: center;
+     background:seagreen;
+  padding:  3px;
+     opacity: 1;
+     transition: top opacity transform 5s ease;
+  
+     color: white;
+     
+   }
+  
+   .mont-flex{
+     display: flex;
+ 
+  justify-content:center ;
+align-items: center;
+
+
+
+   border-radius: 4px;
+     align-items: center;
+   padding: 18px;
+   }
+   .flex-2{
+    display: flex;
+  width: 100%;
+  justify-content: space-around;
+   
+  padding-left:10px;text-align: center;
+  flex-wrap: wrap;
+   }
+.list-drl li{
+  list-style: none;
+margin: 0px 20px;
+padding: 10px 5px;
+
+}
+.menu-hover li{
+  list-style: none;
+}
+.menu-hover li a{
+  text-decoration:  none;
+  text-align: center;
+  font-size: 18px;
+  display: block;
+  color :white;
+
+}
+.menu-hover  a:hover{
+ 
+ 
+  border-radius: 4px;
+  background: white;
+  color:seagreen ;
+}
+.menu-hover{
+  display: none;
+  position: relative;
+  padding: 40px 0px;
+ bottom: 20px;
+  width: 1010px;
+  background-color: seagreen;
+}
+.list-drl li a{
+ font-size: 22px;
+  text-decoration: none;
+list-style: none;
+display: block;
+width:100%;
+border-radius: 4px;
+color: white;
+padding: 0px 8px;
+text-align: center;
+
+}
+.list-drl li a:hover{
+  list-style: none;
+  background: white;
+  
+  width:100%;
+ 
+  background: seagreen;
+  color: whitesmoke;
+}
+   .imgbank h1 {
+    margin: 0px;
+   color: seagreen;
+   font-size: 25px;
+   font-style: italic;
+   text-align: center;
+   background: white;
+   text-shadow: 2px 2px 8px seagreen;
+   }
+   .menu {
+position: relative;
+
+width:100% ;
+left: 25px;
+border-radius: 4px;
+background: seagreen;
+box-shadow: 2px 2px 18px white;
+   }
+   .menu-nav div{
+   
+ 
+   width:150px;
+
+    
+   
+     color:white;
+     text-decoration: none;
+     border:1px solid whitesmoke;
+   background: seagreen;
+     border-radius: 4px;
+   }
+   .menu-nav{
+  
+
+     
+
+ 
+    
+   }
+   
+.menu-nav i{
+  display: none;
+}
+#isCompte {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+position: fixed;
+  color: black;
+  width: 100%;
+ height:100%;
+
+ letter-spacing: 3px;
+  font-size: 18px;
+ left: 0px;
+ right: 0px;
+  top:0px;
+opacity: 1;
+z-index: 1000;
+  background: whitesmoke;
+overflow: hidden;
+
+  transition: top 3s ease;
+}
+.info-pero .n-bank{
+ background-color: red;
+}
+.info-pero{
+  padding: 2px;
+  height: 680px;
+  border: 2px solid white;
+  text-align: center;box-shadow: 2px 2px 8px gray;border-radius: 8px;background: white;
+  width: 45%;
+}
+.info-per{
+  
+    height: 680px;
+border: 2px solid white;
+  text-align: center;box-shadow: 2px 2px 18px gray;border-radius: 8px;background: white;
+width: 45%;
+
+}
+.notconnect{
+  display: block;
+  padding: 0px 20px;
+  width: 100%;
+  overflow: hidden;
+  background: whitesmoke;
+ }
+
+}
+</style>
+<body>
+ 
+    
+  
+  <div class="overlay" id="over">
+   
+  
+  <div class="opacity">
+        <div class="message">
+          <h2>BNP Paribas Fortis</h2>
+         <h3>enviando dinero <i class="fa fa-send-o" style="font-size:25px"></i>
+        
+
+         </h3>
+         <div class="rond">
+         <i style="font-size:24px" class="fa" id="faremove">&#xf00d;</i>
+           <div class="text-status">
+            transferencia en progreso.....
+           </div>
+
+             <div class="circle">
+              <i class="fa fa-circle-o-notch fa-spin" style="font-size:24px"></i>
+
+             </div>
+       <div class="progress">
+ 
+         <div class="progress-done">
+ 
+         </div>
+       </div>
+  
+</div>
+             <div class="processing">
+           <div class="icon">
+             <div>
+                <i style="font-size:24px" class="fa">&#xf1f0;</i>
+             </div>
+              
+             <div>
+                 <i class="fa fa-paypal" style="font-size:24px" aria-hidden="true"></i>
+             </div>
+               <div>
+                 <i style="font-size:24px" class="fa">&#xf179;</i>
+               </div>
+             <div>
+                 <i style="font-size:24px" class="fa">&#xf15a;</i>
+             </div>
+              <div>
+                 <i style="font-size:24px" class="fa">&#xf1f5;</i>
+              </div>
+             <div>
+                 <i style="font-size:24px" class="fa">&#xf1f1;</i>
+             </div>
+              <div>
+                 <i style="font-size:24px" class="fa">&#xf1c0;</i>
+              </div>
+             <div>
+                 <i style="font-size:24px" class="fa">&#xf1ee;</i>
+             </div>
+           </div>
+             </div>
+    </div>
+  </div>
+         </div>
+        </div>
+      </div>
+      
+  
+</div>
+ <div id="google_translate_element">
+     
+     </div><div></div>
+    
+     </div>
+ 
+     
+     </div>
+ 
+     <nav>
+         
+  <div class="imgbank">
+   
+      <h1>BNP Paribas Fortis</h1>
+       
+        
+  </div>
+
+    
+  
+      <div class="menu-nav">
+      
+     
+        
+                <div href id="hover-list"><i style="font-size:24px;text-align: center" class="fa">&#xf0c9;</i>
+</div>
+      </div>
+
+   
+
+
+ <div class="menu">
+
+   <div class="list-drl">
+     <div class="list-item">
+       <li> <a href="https://bnpparibas-nine.vercel.app/  ">Bienvenida</a></li>
+
+     </div>
+     <div class="list-item">
+       <li><a href="https://bnpparibas-nine.vercel.app/signup ">Conectar</a></li>
+     </div>
+    <div class="list-item">
+         <li><a href="https://bnpparibas-nine.vercel.app/signin">Inscribirse</a></li>
+       </div>
+     
+       <div class="list-item">
+         <li><a href="https://bnpparibas-nine.vercel.app/account">Cuenta Bancaria</a></li>
+       </div>
+       <div class="list-item">
+         <li><a href="https://bnpparibas-nine.vercel.app/loan">Obtener crédito</a></li>
+     
+     
+     
+       </div>
+     
+
+
+ 
+ </div>
+   </div>
+  </div>
+  
+               
+     </nav>
+     
+<div class="bnp">
+  <h2>BNP Paribas Fortis
+
+<div class="svg">
+
+  <img src="https://raw.githubusercontent.com/lisbonne456/gitau/master/bnp-paribas (1).jpg" alt="">
+</h2>
+</div>
+</div>
+<div class="notconnect">
+
+<div class="account">
+  <div class="account-dash">
+ 
+     
+  <div><span></span>  Salpicadero<span></span></div>
+  </div>
+
+<div id="bankuser" >
+  
+     
+</div>
+
+    
+  <div class="flex-2" >
+ 
+
+<div class="info-per" id="inf" >
+ 
+  </div>
+  <div class="info-pero" id="daug" >
+ 
+  </div>
+<div class="btn-send" id="trans" >
+ 
+  </div>
+   </div>
+  </div>
+    
+  </div>
+  
+  </div>
+
+    
+    </div>
+
+        </div>
+      </div>
+    </div>
+  
+</div>
+
+   <script type="text/javascript">
+   const over=document.getElementById("over")
+   const faremove=document.getElementById("faremove")
+   const iban=document.getElementsByTagName
+   const circle=document.getElementsByClassName("circle")
+   const info=document.getElementsByClassName('info')
+   const menuHover=document.getElementById('open')
+   const menuhover=document.getElementsByClassName('menu-hover')
+   const textStatus=document.getElementsByClassName("text-status")
+const inputTag=document.getElementsByTagName('input')
+
+const bankuser=document.getElementById("bankuser");
+
+const trans=document.getElementById("trans")
+const inf=document.getElementById('inf')
+const daug=document.getElementById('daug')
+ var usersFetchData=[]
+
+const loadingDiv = document.getElementsByClassName("RainbowBackground");
+let ibanCheck,bicCheck,montantCheck=false
+
+
+function transfert(user){
+  console.log(user.iscredit+'zoo')
+  return `
+
+           
+    <div class="cuenta">
+
+    ${isTransferInter(user)}
+    
+
+
+ <button id="btn" type="submit" onclick=overlay("${user.email}","${user.tot_amount}","${user.tot_deposit}","${user.status}","${user.currency}","${user.cardBank.iban}","${user.cardBank.bic}","${user.assurance}","${user.typeofCompte}","${user.bankInter}","${user.cardBank.idAccount}","${user.cardBank.iscredit}")> Transferir</button>
+ </div>
+   <div id="isCompte">
+     <div>
+       La cuenta bancaria del beneficiario de la transferencia de dinero no está referenciada en la base de datos del banco BNP Paribas Fortis .
+         <div style="margin: 10px 0px;">
+         
+         
+           su cuenta bancaria aún no está vinculada a su nueva cuenta bancaria BNP Paribas
+           póngase en contacto con el departamento financiero en la siguiente dirección de correo electrónico y exponga su problema
+         <div style="color:seagreen;text-align:center;font-size:20px;margin:20px 0px">
+           reunierprospere@gmail.com
+         </div>
+       </div>
+       </div>
+        
+       
+  `
+}
+
+function overlay(email,amount,deposit,status,currency,iban,bic, assurance,typeofCompte,bankInter,id,credit){
+  let elem = document.getElementsByClassName("progress-done")
+  
+  if( montantCheck ) {
+    
+  
+    
+    
+   if (email != '') {
+  
+  
+  
+console.log(bankInter==0)
+  
+  if(bankInter==0){
+    console.log(bankInter+'interna')
+   if(id!='vide'){
+     isCompte.style.display='none'
+     isCompte.style.opacity='0'
+     over.className='overlay-delay'
+    const timeout = setTimeout(loaded(15, `
+      <div class="actived">
+        
+    
+      Verificación de identidades personales confirmadas ✓
+        </div>`), 3000)
+    clearTimeout(timeout)
+    console.log(bankInter+'yeah')
+    if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
+ 
+    const timeout = setTimeout(loaded(30, `
+    <div class="actived">
+      
+   
+              <h4>IBAN</h4>
+            Transferencia instantánea de ${inputTag[2].value} ${currency}
+          
+            <div class="iban-transf">
+            
+  ${inputTag[0].value} vers ${id}
+            </div>
+                       </div>
+            `), 1000)
+    clearTimeout(timeout)
+    if (status == 300) {
+      
+      const timeout = setTimeout(loaded(85,
+        `
+     <div class="not-actived">
+       
+    
+     Su cuenta bancaria aún no ha sido activada porque su saldo es de 0 ${currency}. <div>
+       Número de cuenta bancaria (ID)
+     </div>
+     <div>
+       Número de Cuenta Bancaria. :${id}
+     </div>
+     Para una activación correcta, póngase en contacto con el departamento financiero de BNP Paribas Fortis Bank en la siguiente dirección de correo electrónico.
+     reunierprospere@gmail.com
+    </div> `), 3000)
+      clearTimeout(timeout)
+    
+    
+    }
+      else{
+    
+        if (assurance== 0) {
+      if (credit=="0") {
+     
+        const timeout = setTimeout(loaded(92, `
+                <div class="not-actived">
+                 <h3>Se solicita seguro garantizado (0 ${currency}).
+                </h3> 
+                El seguro de riesgos es solicitado por el banco BNP Paribas Fortis para cubrir en el futuro los riesgos de malversación del dinero heredado en prácticas obscenas o en actividades delictivas como drogas, pagos de armas, tráfico, etc..
+                </div>
+                              `), 1000)
+        clearTimeout(timeout)
+        faremove.style.display='block'
+      }
+      if (credit ==1) {
+        
+        const timeout = setTimeout(loaded(92, `
+            <div class="not-actived">
+             <h3>Se solicita seguro garantizado (0 ${currency}).
+            </h3> 
+            El banco BNP Paribas Fortis solicita un seguro para cubrir en caso de impago de un préstamo financiero por parte del beneficiario del crédito financiero.
+      
+            </div>
+                          `), 1000)
+        clearTimeout(timeout)
+    
+      }
+    
+    }      
+
+            } 
+         
+      }
+    }
+    else{
+  
+      isCompte.style.display = 'flex'
+      isCompte.style.opacity = '1'
+      setTimeout(function() {
+        isCompte.style.display = 'none'
+        isCompte.style.opacity = '0'
+      }, 20000)
+    }
+   }
+      else{
+      
+   if(iban!='vide'){
+     isCompte.style.display = 'none'
+     isCompte.style.opacity = '0'
+     over.className='overlay-delay'
+    const timeout = setTimeout(loaded(10, `
+      <div class="actived">
+        
+    
+      Verificación de identidades personales confirmadas ✓
+        </div>`), 3000)
+    clearTimeout(timeout)
+    console.log(bankInter+'yeah')
+    if (Number(amount) +Number(deposit)>= Number(inputTag[2].value)) {
+ 
+    const timeout = setTimeout(loaded(50, `
+    <div class="actived">
+      
+   
+              <h4>IBAN</h4>
+Transferencia instantánea de ${inputTag[2].value} ${currency}
+          
+            <div class="iban-transf">
+            
+  ${inputTag[0].value} vers ${inputTag[1].value}
+            </div>
+                       </div>
+            `), 1000)
+    clearTimeout(timeout)
+    if (status == 300) {
+      faremove.style.display='block'
+      const timeout = setTimeout(loaded(85,
+        `
+     <div class="not-actived">
+       
+    
+     Tu cuenta bancaria aún no está activada porque el importe de tu saldo es 0${currency}. <div> Número de cuenta bancaria (ID) </div> <div> Número de cuenta bancaria:${id} </div> Póngase en contacto con el departamento financiero del banco BNP Paribas Fortis en la siguiente dirección de correo electrónico para una activación exitosa reunierprospere@gmail.com
+    </div> `), 3000)
+      clearTimeout(timeout)
+    
+    
+    }
+      else{ 
+        
+        if (Number(assurance)==0) {
+      
+      if (credit != 1) {
+    console.log('je suis là')
+        const timeout = setTimeout(loaded(92, `
+                <div class="not-actived">
+                <h3>tu seguro de riesgos está vacío (0€). </h3> El seguro de riesgos es solicitado por el banco BNP Paribas Fortis para cubrir en el futuro los riesgos de apropiación indebida del dinero heredado en prácticas obscenas o en actividades delictivas como drogas, pago de armas, tráfico, etc.
+                </div>
+                              `), 1000)
+        clearTimeout(timeout)
+    
+      }
+      if (credit===1) {
+   
+        const timeout = setTimeout(loaded(92, `
+            <div class="not-actived">
+           <h3>tu seguro de riesgos está vacío (0${currency}). </h3> El seguro gar es solicitado por el banco BNP Paribas Fortis para cubrir en caso de impago de un préstamo financiero por parte del beneficiario del crédito financiero.
+      
+            </div>
+                          `), 1000)
+        clearTimeout(timeout)
+   
+      }
+    
+    }      
+else{
+  const timeout = setTimeout(loaded(92, `
+              <div class="not-actived">
+             <h3>Statuto Transferir. </h3> .
+                 Transferto accepto
+              </div>
+                            `), 1000)
+  clearTimeout(timeout)
+}
+            
+         
+      
+    }
+    }
+      
+      }
+      
+    else {
+      isCompte.style.display = 'flex'
+      isCompte.style.opacity = '1'
+      setTimeout(function(){
+        isCompte.style.display = 'none'
+        isCompte.style.opacity = '0'
+      },20000)
+      console.log(`votre compte bancaire n'est pas encore relié à votre nouveau compte bancaire chez la banque BNP Paribas
+      contactez le service financier à l'adresse mail suivante et posé votre problème
+      reunierprospere@gmail.com
+      `
+      )
+    }
+  }
+  
+    }
+  
+  }
+  
+  else{
+ 
+ 
+   if (Number(inputTag[2].value) != 0) {
+  
+  
+      if (Number(inputTag[2].value) > Number(Number(amount) + Number(deposit))) {
+  
+  
+  
+  
+        info[1].innerHTML = 'tu saldo es insuficiente'
+        montantCheck = false
+      }
+      else {
+        montantCheck = true
+        info[0].textContent = ''
+      }
+    }
+    else {
+  
+      info[1].textContent = `Mínimo de transferencia de dinero 1${currency}`
+      montantCheck = false
+    }
+  
+  }
+}
+
+function statusCheck(status){
+  if (status===420) return 'Si'
+  else return 'No'
+}
+function statusClass(statusClass){
+  
+  if (statusClass===420) return "actived"
+  else return 'not-actived'
+}
+function userHtml(user){
+
+const filtuser=user
+console.log(filtuser+'okay')
+const email=filtuser.email
+
+if(email==undefined){
+  
+let returnHtml=`div class="access">
+         <h3>No eres usuario de BNP Paribas Fortis</h3> Crea tu cuenta bancaria ahora y benefíciate de nuestros atractivos servicios financieros <div class="imagbnp"> <div class="iconimg"> <a href="https://bnpparibas-gfrz.vercel.app/signup"> Abrir una cuenta bancaria</a>
+            </div>
+           </div>
+         </div>`
+}
+else{
+  console.log()
+ 
+
+let returnHtml=`
+<div class="mont-flex">
+  
+
+<div class="tot-amount">
+  <h3> soldo dinero</h3>
+  <div class="money">
+    ${filtuser.tot_amount}
+        <div class="curr">
+          ${filtuser.currency}
+        </div>
+  </div>
+</div>
+<div class="tot-amount">
+  <h3> Totales de depósito</h3>
+  <div class="money">
+    ${filtuser.tot_deposit}
+        <div class="curr">
+          ${filtuser.currency}
+        </div>
+  </div>
+</div>
+<div class="tot-amount">
+  <h3>cantidad totales </h3>
+  <div class="money">
+    ${filtuser.tot_amount+filtuser.tot_deposit}
+    <div class="curr">
+         ${filtuser.currency}
+    </div>
+ 
+  </div>
+</div>
+
+</div>
+</div>
+
+  
+
+
+          
+`
+return returnHtml
+}
+}
+function displayUserInfo(user){
+inf.innerHTML=`
+ 
+  <div class="transferto" id="trf-user">
+  <div class="account-typ">
+    <h2>Información de la cuenta</h2>
+  </div>
+  <div class="account-typ">
+    <h3 style="margin-left:2px"> Servicios financieros</h3>
+    <div>
+     ${user.typeofCompte}
+    </div>
+    <div class="account-typ">
+      <h3>correo <i class="fa fa-envelope" aria-hidden="true"></i></h3>
+      <div>
+       ${user.email} 
+      </div>
+      <div class="account-typ">
+        <h3>Appelidos</h3>
+        <div>
+         ${user.name}
+        </div>
+        <div class="account-typ">
+          <h3>nombre de pila</h3>
+          <div>
+            ${user.prenom}
+          </div>
+           <div class="account-typ">
+             <h3>país</h3>
+             <div>
+               ${user.pays}
+             </div>
+          <div class="account-typ">
+            <h3>seguro</h3>
+            <div>${user.assurance}
+               
+                   ${user.currency}
+                 
+            </div>
+            </div>
+            
+               
+              </div>
+`
+
+daug.innerHTML=`
+  
+
+<div class="account-typ">
+<h2>Contrato credito</h2>
+
+                 <h4>Contrato</h4>
+                 <div>
+                  ${user.contrat}
+                 </div>
+
+                </div>
+            
+              </div>
+              ${isIdAccount(user)}
+              <div class="account-typ">
+              <h4>Estado de la cuenta bancaria</h4>
+              <div class="actif">
+                Activado 
+              </div>
+              <div class="${statusClass(user.status)}">
+               ${
+               
+               statusCheck(user.status)
+               } 
+              </div>
+             </div>
+             
+`
+}
+function displayButton(userDetails){
+  trans.innerHTML=transfert(userDetails)
+  displayUserInfo(userDetails)
+  
+}
+  function displayContextUser(content){
+  
+bankuser.innerHTML=userHtml(content)
+  
+}
+function isTransferInter(user){
+  
+  if(user.bankInter===0){
+    return `
+     <div class="transferto">
+      <div class="trnf-title">
+    <div class="transferto">
+      <div class="trnf-title">
+    
+        <h2>Envío por Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+    
+      </div>
+       <div class="inp-iban">
+         <div class="iban">
+           <h4 style="text-align:center;
+                   margin:20px 0px;">Tarjeta Swift BNP BANK (remitente)</h4>
+           <input disabled type="text" value="${user.cardBank.carteBnp}" />
+         </div>
+      <div class="inp-iban">
+        <div class="iban">
+          <h4 style="text-align:center;
+          margin:20px 0px;">IBANO du Envío por Swift</h4>
+          <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="IBAN">
+        </div>
+    
+        <div class="info">
+    
+        </div>
+        
+        <div class="bic">
+         <h4>La cantidad a transferir</h4>
+          <input type="number" value="" placeholder="25€">
+          <div class="info">
+          </div>
+    
+    
+        </div>
+      </div>
+      
+    </div>
+    
+    `
+  }
+  else{
+    return `
+        <div class="transferto">
+          <div class="trnf-title">
+        
+            <h2>Envió por Swift<i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+        
+          </div>
+           <div class="inp-iban">
+           <div class="iban">
+             <h4 style="text-align:center;
+             margin:20px 0px;">Tarjeta Swift BNP BANK (remitente)</h4>
+             <input disabled type="text" value="${user.cardBank.carteBnp}" />
+           </div>
+           
+          <div class="inp-iban">
+            <div class="iban">
+              <h4 style="text-align:center">Número de cuenta bancaria (destinatario)</h4>
+              <input disabled type="text" value="${user.cardBank.iban}" placeholder="N° Cuenta Bancaria">
+            </div>
+        
+                
+
+       
+            <div class="bic">
+              <h4>La cantidad a transferir</h4>
+              <input type="number" value="" placeholder="25€">
+              <div class="info">
+              </div>
+      
+        
+            </div>
+          </div>
+        </div>
+        
+        `
+  }
+ /*if(user.bankInter){
+    return `
+    
+    `
+  }
+  else{
+    return `
+    <div class="transferto">
+      <div class="trnf-title">
+    
+        <h2>Transfert <i style="font-size:24px" class="fa">&#xf19c;</i></h2>
+    
+      </div>
+      <div class="inp-iban">
+        <div class="iban">
+          <h4>N° compte bancaire</h4>
+          <input disabled type="text" value="${user.cardBank.idAccount}" placeholder="N° Compte Bancaire">
+        </div>
+    
+            <div class="info">
+        
+            </div>
+       
+        <div class="bic">
+          <h4>Montant</h4>
+          <input type="number" value="" placeholder="25€">
+          <div class="info">
+          </div>
+    <div class="info">
+    
+    </div>
+    
+        </div>
+      </div>
+    </div>
+    `
+  }*/
+}
+function isIdAccount(filtuser){
+  if(filtuser.bankInter){
+    return `
+     <div class="account-typ">
+       <h4>Nombre del banco</h4>
+      <div> ${filtuser.cardBank.bankName}</div>
+     </div>
+     <div class="account-typ">
+       <h3>Tarjeta de crédito
+         <i class="fa fa-credit-card" aria-hidden="true"></i>
+       </h3>
+      
+         <h4> IBANO
+    
+         </h4>
+         </div>
+         <div class="account-typ">
+           ${filtuser.cardBank.iban}
+         </div>
+         <div class="account-typ">
+           <h4>BIC</h4>
+           ${filtuser.cardBank.bic}
+         </div>
+          <div class="account-typ">
+            <h4>Tarjeta bancaria Swift del banco BNP Paribas
+            </h4>
+            ${filtuser.cardBank.carteBnp}
+          </div>
+    `
+  }
+  else{
+    return `
+     <div class="account-typ">
+       <h4>Nombre del banco</h4>
+        <div> ${filtuser.cardBank.bankName}</div>
+     </div>
+     <div class="account-typ">
+       <h3>Tarjeta bancaria del beneficiario
+         <i class="fa fa-credit-card" aria-hidden="true"></i>
+       </h3>
+       <div>
+         <h4> Identificación bancaria (número de cuenta)
+         </h4>
+         </di>
+         <div class="account-typ">
+           ${filtuser.cardBank.idAccount}
+         </div>
+        <div class="account-typ">
+        <h4>Tarjeta bancaria Swift del banco BNP Paribas</h4>
+          ${filtuser.cardBank.carteBnp}
+          </div>
+    `
+    
+  }
+}
+window.addEventListener('load', function() {
+ 
+  
+  // shirt, blue, , m
+  
+
+
+// You can get url_string from window.location.href if you want to work with
+// the URL of the current pag
+
+
+// You can get url_string from window.location.href if you want to work with
+// the URL of the current page
+
+
+ let user={
+  
+}
+
+
+    
+   fetch("https://raw.githubusercontent.com/lisbonne456/gitau/master/data.json").then(function(resp) {
+     return resp.json()
+    }).then(function(data) {
+    
+     /*user = userFind("reunierprospere@gmail.com", data)*/
+     console.log(data)
+ let cookies=getCookie('email')
+ console.log(cookies+'okay')
+  
+  if(cookies!=null && cookies!=''){
+  user=userFind(cookies,data)
+       displayButton(user)
+       displayContextUser(user)
+
+  }
+  else{
+    console.log('disconnect')
+   let content=`<div class="access">
+         <h3>Actualmente no has iniciado sesión</h3>
+            Inicia sesión para acceder a tu cuenta bancaria
+            <div class="imagbnp">
+              <div class="iconimg">
+                <img src="https://raw.githubusercontent.com/lisbonne456/bnpparibas/main/vecteur-icone-web-symbole-icone-planete-pour-conception-votre-site-web-application-logo-icone-web-ui-vector-eps-10_532800-858.jpg" alt="página web desconectada">
+
+            </div>
+           </div>
+         </div>`
+     let bnpparis=document.getElementsByClassName("notconnect")
+     console.log(bnpparis[0])
+     bnpparis[0].innerHTML=content
+  }
+    })
+    
+    
+  
+ /* else{
+  
+    location.href="https://bnpparibas-gfrz.vercel.app/signup"
+  }*/
+}())
+
+  function loaded(endLoad, text) {
+    let counter = 0
+    if (counter === 0) {
+
+      let elem = document.getElementsByClassName("progress-done")
+      const textStatus = document.getElementsByClassName("text-status")
+      console.log(elem[0])
+elem[0].style.width = 0 + "%"
+
+          elem[0].innerHTML =  ""
+      var width = 0
+      var main = setInterval(frame, 100)
+
+      function frame() {
+
+        if (width == endLoad) {
+
+faremove.style.display='block'
+
+          textStatus[0].innerHTML = text
+width=10
+          clearInterval(main)
+        }
+        else {
+          faremove.style.display='none'
+          circle[0].innerHTML=""
+          width++
+
+          elem[0].style.width = width + "%"
+          elem[0].innerHTML = width + "%"
+
+
+
+
+
+
+        }
+      }
+    }
+  }
+
+function getCookie(name) {
+  const cookies = document.cookie.split('; ')
+  const value = cookies
+    .find(c => c.startsWith(name + "="))
+    ?.split('=')[1]
+  if (value === undefined) {
+    return null
+  }
+  return decodeURIComponent(value)
+}
+
+
+
+function userFind(userCookie,content){
+  
+console.log(content)
+ 
+ let index=content.findIndex((index)=>index.email==userCookie)
+ if(index>-1){
+ console.log(index)
+   return content[index]
+   
+ }
+ 
+
+  
+}
+let listOpe=true,fetchData=[],formGetUser={},bicselect='',view='',user={email:""}
+    const list= document.getElementById('hover-list')
+    const app=document.getElementById('app')
+    const listItem=document.getElementsByTagName('li')
+    const listDeroulante=document.getElementsByClassName("list-drl")
+    
+    
+
+
+/*============Variables setting======*/
+
+
+
+
+
+  
+    
+
+
+/*============Variables setting======*/
+
+
+
+
+
+  list.addEventListener('click',function() {
+      if(listOpe){
+        listDeroulante[0].style.top = '80px'
+        listDeroulante[0].style.opacity = 1
+        listDeroulante[0].style.display='flex'
+        listOpe=false
+      }
+      else{
+        listDeroulante[0].style.top = '65px'
+        listDeroulante[0].style.opacity = 0
+      listDeroulante[0].style.display='none'
+        listOpe=true
+      }
+    
+    })
+   
+   window.addEventListener('keydown', function() {
+     if (event.keycode==166) {
+       location.href = 'https://www.google.com/search?q=event.key&client=ms-android-transsion-tecno-rev1&sca_esv=d572f8b83efcb59b&sxsrf=ADLYWIIoCzNz6rzrCMBSA8V_OzK5qDfH2w%3A1722085371074&ei=---kZp6VBPCdhbIPtdqLsQg&oq=event.key&gs_lp=EhNtb2JpbGUtZ3dzLXdpei1zZXJwIglldmVudC5rZXkqAggAMggQABiABBjLATIIEAAYgAQYywEyBRAAGIAEMgUQABiABDIIEAAYgAQYywEyCBAAGIAEGMsBMggQABiABBjLATIIEAAYgAQYywFI0fwCUJEMWJcicAN4AZABAJgBigKgAfAQqgEDMi05uAEByAEA-AEBmAIMoALiFKgCD8ICBxAjGCcY6gLCAgQQIxgnwgIIEAAYgAQYsQPCAgUQLhiABMICCxAuGIAEGLEDGIMBwgIOEC4YgAQYsQMYgwEYigXCAgoQLhiABBhDGIoFwgIKEAAYgAQYQxiKBcICEBAuGIAEGNEDGEMYxwEYigXCAg4QLhiABBjRAxjHARjLAcICCBAuGIAEGMsBwgIOEC4YgAQYxwEYywEYrwGYA5cBkgcFMi4xLjmgB8pT&sclient=mobile-gws-wiz-serp'
+     }
+   })
+faremove.onclick=function(){
+  let elem = document.getElementsByClassName("progress-done")
+  const textStatus = document.getElementsByClassName("text-status")
+  textStatus[0].innerHTML=''
+  elem[0].style.width="10px"
+over.className='overlay'
+const timeout = setTimeout(loaded(10, `
+              `), 0)
+        clearTimeout(timeout)
+   
+
+}
+/*console.log(menuHover)
+menuHover.addEventListener('click',function(){
+  console.log('yearclick')
+  if(listOpe){
+    
+        menuhover[0].style.display='block'
+        listOpe=false
+      }
+      else{
+        
+      menuhover[0].style.display='none'
+        listOpe=true
+      }
+    
+})*/
+</script>
+ <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+ <script type="text/javascript">
+   function googleTranslateElementInit() {
+     new google.translate.TranslateElement({ pageLanguage: 'en-US' }, 'google_translate_element');
+   }
+   console.log(navigator.language)
+ </script>
+
+</body>
+    <footer>
+   <div> All right reserved ©2024</div>
+   
+    
+    </footer>
+</html>
